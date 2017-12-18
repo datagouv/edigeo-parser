@@ -2,7 +2,7 @@
 
 const test = require('ava')
 const streamify = require('stream-array')
-const {parseLine, parseStream} = require('../lib')
+const {parseLine, parseStream} = require('../lib/parse')
 
 async function parseLines(lines) {
   const readable = streamify(lines)
