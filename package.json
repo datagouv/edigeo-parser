@@ -1,0 +1,33 @@
+{
+  "name": "edigeo-parser",
+  "version": "0.1.0-pre",
+  "description": "Blazing fast parser for EDIGEO files",
+  "main": "./lib",
+  "repository": "git@github.com:etalab/edigeo-parser.git",
+  "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "xo",
+    "test": "ava"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "split2": "^2.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "stream-array": "^1.1.2",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false,
+    "rules": {
+      "curly": "off"
+    }
+  },
+  "engines": {
+    "node": ">= 8"
+  }
+}
