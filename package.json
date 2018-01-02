@@ -7,16 +7,25 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
   "license": "MIT",
   "private": false,
+  "bin": {
+    "edigeo-parse": "bin/cli.js"
+  },
   "scripts": {
     "lint": "xo",
-    "test": "ava"
+    "test": "nyc ava",
+    "codecov": "codecov -f coverage/coverage-final.json"
   },
   "dependencies": {
     "debug": "^3.1.0",
+    "decompress": "^4.2.0",
+    "get-stdin": "^5.0.1",
+    "lodash": "^4.17.4",
     "split2": "^2.2.0"
   },
   "devDependencies": {
     "ava": "^0.24.0",
+    "codecov": "^3.0.0",
+    "nyc": "^11.4.1",
     "stream-array": "^1.1.2",
     "xo": "^0.18.2"
   },

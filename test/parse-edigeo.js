@@ -95,6 +95,6 @@ test('parseObject-LNK', async t => {
     'QACSN01:0'
   ])
   t.truthy(result.Compo_IND_Arc_99_Noeud_1)
-  t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.parent, {ns: 'SeTOP_1', type: 'PAR', id: 'Arc_99'})
-  t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.children, [{ns: 'SeTOP_1', type: 'PNO', id: 'Noeud_1'}])
+  t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.parent, 'SeTOP_1:Arc_99')
+  t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.children, ['SeTOP_1:Noeud_1'])
 })
