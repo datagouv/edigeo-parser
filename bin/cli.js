@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const getStdin = require('get-stdin')
-const {parseBundleBuffer} = require('../lib')
+const {parseBundleBuffer} = require('../lib/io/buffers')
 const analyze = require('../lib/analyze')
 
 async function doStuff() {
