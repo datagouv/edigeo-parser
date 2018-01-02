@@ -1,12 +1,11 @@
 /* eslint camelcase: off */
 
 const test = require('ava')
-const streamify = require('stream-array')
-const {parseLine, parseStream} = require('../lib/blocks/parse')
+const {parseLine} = require('../lib/blocks/parse')
+const {parseBuffer} = require('../lib/readers/buffer')
 
 async function parseLines(lines) {
-  const readable = streamify(lines)
-  return parseStream(readable)
+  return parseBuffer(lines.join('\n'))
 }
 
 test('parseLine-COR', t => {
