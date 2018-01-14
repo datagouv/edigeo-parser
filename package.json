@@ -38,7 +38,8 @@
     "space": 2,
     "semicolon": false,
     "rules": {
-      "curly": "off"
+      "curly": "off",
+      "unicorn/no-process-exit": "off"
     }
   },
   "engines": {
