@@ -1,5 +1,5 @@
 {
-  "name": "edigeo-parser",
+  "name": "@etalab/edigeo-parser",
   "version": "0.1.0",
   "description": "Blazing fast parser for EDIGEO files",
   "main": "./lib",
