@@ -97,3 +97,23 @@ test('parseObject-LNK', async t => {
   t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.parent, 'SeTOP_1:Arc_99')
   t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.children, ['SeTOP_1:Noeud_1'])
 })
+
+test('block type: QUP', async t => {
+  const result = await parseLines([
+    'RTYSA03:QUP',
+    'RIDSA22:Actualite_Objet_397889',
+    'ODASD08:20071129',
+    'UTYSN01:1',
+    'ULOSN01:2',
+    'UDASD08:20160405',
+    'RATSR00:',
+    'EDASD00:',
+    'COCSN01:1',
+    'COPCP26:EDAE01;SeSD;OBJ;COMMUNE_id'
+  ])
+  t.truthy(result.Actualite_Objet_397889)
+  const qupBlock = result.Actualite_Objet_397889
+  t.is(qupBlock.blockType, 'QUP')
+  t.is(qupBlock.createdAt, '2007-11-29')
+  t.is(qupBlock.updatedAt, '2016-04-05')
+})
