@@ -24,7 +24,7 @@
     "@turf/helpers": "^5.1.5",
     "@turf/length": "^5.1.5",
     "@turf/line-slice": "^5.1.5",
-    "@turf/point-to-line-distance": "^5.1.5",
+    "@turf/point-to-line-distance": "5.1.5",
     "debug": "^3.1.0",
     "decompress": "^4.2.0",
     "epsg-index": "^0.7.0",
