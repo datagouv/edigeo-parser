@@ -27,17 +27,17 @@
     "@turf/point-to-line-distance": "5.1.5",
     "debug": "^3.1.0",
     "decompress": "^4.2.0",
-    "epsg-index": "^0.7.0",
-    "get-stdin": "^5.0.1",
-    "is-buffer": "^1.1.6",
-    "lodash": "^4.17.4",
+    "epsg-index": "^0.13.0",
+    "get-stdin": "^6.0.0",
+    "is-buffer": "^2.0.2",
+    "lodash": "^4.17.10",
     "proj4": "^2.4.4",
     "split2": "^2.2.0"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
-    "codecov": "^3.0.0",
-    "nyc": "^11.4.1",
+    "ava": "^0.25.0",
+    "codecov": "^3.0.1",
+    "nyc": "^11.7.1",
     "xo": "^0.18.2"
   },
   "xo": {
