@@ -16,6 +16,7 @@
   "scripts": {
     "lint": "xo",
     "test": "nyc ava",
+    "test:unit": "ava",
     "codecov": "codecov -f coverage/coverage-final.json"
   },
   "dependencies": {
