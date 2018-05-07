@@ -19,12 +19,7 @@
     "codecov": "codecov -f coverage/coverage-final.json"
   },
   "dependencies": {
-    "@turf/boolean-clockwise": "^5.1.5",
-    "@turf/boolean-point-in-polygon": "^5.1.5",
-    "@turf/helpers": "^5.1.5",
-    "@turf/length": "^5.1.5",
-    "@turf/line-slice": "^5.1.5",
-    "@turf/point-to-line-distance": "5.1.5",
+    "@turf/turf": "^5.1.6",
     "debug": "^3.1.0",
     "decompress": "^4.2.0",
     "epsg-index": "^0.13.0",
