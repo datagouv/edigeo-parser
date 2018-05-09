@@ -1,7 +1,7 @@
 /* eslint camelcase: off */
 
 const test = require('ava')
-const {parseLine} = require('../lib/blocks/parse')
+const {parseLine} = require('../lib/parse')
 const {parseBuffer} = require('../lib/readers/buffer')
 
 async function parseLines(lines) {
