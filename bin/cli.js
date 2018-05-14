@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const getStdin = require('get-stdin')
-const {parse} = require('../')
+const {parse} = require('..')
 
 async function doStuff() {
   const buf = await getStdin.buffer()

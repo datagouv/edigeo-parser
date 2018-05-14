@@ -35,14 +35,14 @@
     "ava": "^0.25.0",
     "codecov": "^3.0.1",
     "nyc": "^11.7.1",
-    "xo": "^0.18.2"
+    "xo": "^0.21.0"
   },
   "xo": {
     "space": 2,
     "semicolon": false,
     "rules": {
       "curly": "off",
-      "unicorn/no-process-exit": "off"
+      "prefer-destructuring": "off"
     }
   },
   "engines": {
