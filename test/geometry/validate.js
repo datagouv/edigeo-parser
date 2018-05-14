@@ -2,7 +2,7 @@ const test = require('ava')
 const {validate} = require('../../lib/geometry/validate')
 
 test('validate: self-intersecting polygon', t => {
-  const poly = require('./fixtures/self-intersecting-polygon.json')
+  const poly = require('./fixtures/self-intersecting-multipolygon.json')
   const result = validate(poly)
   t.true(result.includes('has-self-intersection'))
   t.is(result.length, 1)
