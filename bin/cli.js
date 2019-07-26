@@ -8,7 +8,7 @@ async function doStuff() {
   console.log('Found %d layers!', Object.keys(layers).length)
 }
 
-doStuff().catch(err => {
-  console.error(err)
+doStuff().catch(error => {
+  console.error(error)
   process.exit(1)
 })
