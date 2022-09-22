@@ -1,5 +1,8 @@
-import test from 'ava';
-import { validate } from '../../lib/geometry/validate';
+import {createRequire} from 'node:module'
+import test from 'ava'
+import {validate} from '../../lib/geometry/validate.js'
+
+const require = createRequire(import.meta.url)
 
 test('validate: self-intersecting polygon', t => {
   const poly = require('./fixtures/self-intersecting-multipolygon.json')
@@ -41,7 +44,7 @@ test('validate: polygon without ring', t => {
 test('validate: polygon has exterior holes', t => {
   const poly = {type: 'Polygon', coordinates: [
     [[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]],
-    [[4, 4], [4, 5], [5, 5], [5, 4], [4, 4]]
+    [[4, 4], [4, 5], [5, 5], [5, 4], [4, 4]],
   ]}
   const result = validate(poly)
   t.true(result.includes('has-exterior-holes'))
@@ -52,10 +55,11 @@ test('validate: polygon has crossing holes', t => {
   const poly = {type: 'Polygon', coordinates: [
     [[0, 0], [0, 10], [10, 10], [10, 0], [0, 0]],
     [[4, 4], [4, 6], [6, 6], [6, 4], [4, 4]],
-    [[5, 5], [5, 7], [7, 7], [7, 5], [5, 5]]
+    [[5, 5], [5, 7], [7, 7], [7, 5], [5, 5]],
   ]}
   const result = validate(poly)
   t.true(result.includes('has-crossing-holes'))
   t.true(result.includes('has-self-intersection'))
   t.is(result.length, 2)
 })
+

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import getStdin from 'get-stdin';
-import { parse } from '../lib/index.js';
+import process from 'node:process'
+import getStdin from 'get-stdin'
+import {parse} from '../lib/index.js'
 
 async function doStuff() {
   const buf = await getStdin.buffer()

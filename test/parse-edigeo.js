@@ -1,9 +1,9 @@
 /* eslint camelcase: off */
 
-import test from 'ava';
+import test from 'ava'
 
-import { parseLine } from '../lib/parse/parse';
-import { parseBuffer } from '../lib/parse/readers/buffer';
+import {parseLine} from '../lib/parse/parse.js'
+import {parseBuffer} from '../lib/parse/readers/buffer.js'
 
 async function parseLines(lines) {
   return parseBuffer(lines.join('\n'))
@@ -11,7 +11,7 @@ async function parseLines(lines) {
 
 test('parseLine-COR', t => {
   const line = 'CORCC23:+579588.05;+6680876.27;'
-  t.deepEqual(parseLine(line).parsedValue, [579588.05, 6680876.27])
+  t.deepEqual(parseLine(line).parsedValue, [579_588.05, 6_680_876.27])
 })
 
 test('parseObject-PAR', async t => {
@@ -27,10 +27,10 @@ test('parseObject-PAR', async t => {
     'CORCC23:+580558.41;+6680802.61;',
     'CORCC23:+580541.68;+6680828.28;',
     'ATCSN01:0',
-    'QACSN01:0'
+    'QACSN01:0',
   ])
   t.truthy(result.Arc_99)
-  t.deepEqual(result.Arc_99.coordinates, [[580566.36, 6680791.23], [580558.41, 6680802.61], [580541.68, 6680828.28]])
+  t.deepEqual(result.Arc_99.coordinates, [[580_566.36, 6_680_791.23], [580_558.41, 6_680_802.61], [580_541.68, 6_680_828.28]])
 })
 
 test('parseObject-PNO', async t => {
@@ -41,10 +41,10 @@ test('parseObject-PNO', async t => {
     'TYPSN01:1',
     'CORCC24:+1743020.76;+7178777.64;',
     'ATCSN01:0',
-    'QACSN01:0'
+    'QACSN01:0',
   ])
   t.truthy(result.Noeud_1)
-  t.deepEqual(result.Noeud_1.coordinates, [[1743020.76, 7178777.64]])
+  t.deepEqual(result.Noeud_1.coordinates, [[1_743_020.76, 7_178_777.64]])
 })
 
 test('parseObject-FEA', async t => {
@@ -70,16 +70,16 @@ test('parseObject-FEA', async t => {
     'TEXT 06:8859-1',
     'ATVST12:244000ZE0006',
     'QACSN01:1',
-    'QAPCP38:EDZE01;SeQL;QUP;Actualite_Objet_279590'
+    'QAPCP38:EDZE01;SeQL;QUP;Actualite_Objet_279590',
   ])
   t.truthy(result.Objet_279590)
   t.is(result.Objet_279590.featureType, 'PARCELLE_id')
   t.deepEqual(result.Objet_279590.attributes, {
-    SUPF_id: 64318,
+    SUPF_id: 64_318,
     INDP_id: '01',
     COAR_id: 'A',
     TEX_id: '6',
-    IDU_id: '244000ZE0006'
+    IDU_id: '244000ZE0006',
   })
 })
 
@@ -92,10 +92,10 @@ test('parseObject-LNK', async t => {
     'FTPCP25:EDZE01;SeTOP_1;PAR;Arc_99',
     'FTPCP26:EDZE01;SeTOP_1;PNO;Noeud_1',
     'ATCSN01:0',
-    'QACSN01:0'
+    'QACSN01:0',
   ])
   t.truthy(result.Compo_IND_Arc_99_Noeud_1)
-  t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.parent, 'SeTOP_1:Arc_99')
+  t.is(result.Compo_IND_Arc_99_Noeud_1.parent, 'SeTOP_1:Arc_99')
   t.deepEqual(result.Compo_IND_Arc_99_Noeud_1.children, ['SeTOP_1:Noeud_1'])
 })
 
@@ -110,7 +110,7 @@ test('block type: QUP', async t => {
     'RATSR00:',
     'EDASD00:',
     'COCSN01:1',
-    'COPCP26:EDAE01;SeSD;OBJ;COMMUNE_id'
+    'COPCP26:EDAE01;SeSD;OBJ;COMMUNE_id',
   ])
   t.truthy(result.Actualite_Objet_397889)
   const qupBlock = result.Actualite_Objet_397889
