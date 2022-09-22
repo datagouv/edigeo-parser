@@ -1,5 +1,5 @@
-const test = require('ava')
-const {deintersectMultiPolygon, deintersectPolygon} = require('../../lib/geometry/clean')
+import test from 'ava';
+import { deintersectMultiPolygon, deintersectPolygon } from '../../lib/geometry/clean';
 
 test('deintersectMultiPolygon: regular behavior', t => {
   const selfIntersectingPolygon = require('./fixtures/self-intersecting-multipolygon.json')

@@ -1,8 +1,9 @@
 /* eslint camelcase: off */
 
-const test = require('ava')
-const {parseLine} = require('../lib/parse/parse')
-const {parseBuffer} = require('../lib/parse/readers/buffer')
+import test from 'ava';
+
+import { parseLine } from '../lib/parse/parse';
+import { parseBuffer } from '../lib/parse/readers/buffer';
 
 async function parseLines(lines) {
   return parseBuffer(lines.join('\n'))

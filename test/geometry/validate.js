@@ -1,5 +1,5 @@
-const test = require('ava')
-const {validate} = require('../../lib/geometry/validate')
+import test from 'ava';
+import { validate } from '../../lib/geometry/validate';
 
 test('validate: self-intersecting polygon', t => {
   const poly = require('./fixtures/self-intersecting-multipolygon.json')
