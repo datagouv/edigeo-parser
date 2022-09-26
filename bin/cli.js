@@ -8,7 +8,7 @@ async function doStuff() {
   const {layers} = await parse(buf)
   console.log('Found %d layers!', Object.keys(layers).length)
   for (const [key, value] of Object.entries(layers)) {
-    console.log(`Layer name ${key}: ${value.length}`);
+    console.log(`Layer name ${key}: ${value.length}`)
   }
 }
 
