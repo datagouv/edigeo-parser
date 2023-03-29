@@ -10,7 +10,7 @@ Parse les données EDIGEO pour les convertir en GeoJSON (sans reprojection en WG
 npm install @etalab/edigeo-parser
 ```
 
-Si vous avez besoin de la syntaxe CommonJS, vous pouvez utiliser la version 0.9.0 plus ancienne du package et l'installer avec la commande `npm install @etalab/edigeo-parser@0.9.0`
+Si vous avez besoin de la syntaxe CommonJS, vous pouvez utiliser la version 0.9.1 plus ancienne du package et l'installer avec la commande `npm install @etalab/edigeo-parser@0.9.1`
 
 ### Exemple d'utilisation
 
@@ -44,7 +44,7 @@ run('edigeo-540080000C01.tar.bz2').catch(console.error);
 
 #### Exemple avec la syntaxe CommonJS
 
-Pour rappel, elle ne fonctionne que si vous avez le package `@etalab/edigeo-parser@0.9.0` package.
+Pour rappel, elle ne fonctionne que si vous avez le package `@etalab/edigeo-parser@0.9.1` package.
 
 Soit le fichier `index-commonjs.mjs` comme suivant
 
