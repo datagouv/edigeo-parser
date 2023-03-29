@@ -12,10 +12,10 @@ jobs:
           command: yarn
       - run:
           name: Run lint
-          command: yarn test
+          command: yarn lint
       - run:
           name: Run tests
-          command: yarn lint
+          command: yarn test
       - run:
           name: Run codecov
           command: yarn codecov
