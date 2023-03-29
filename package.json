@@ -1,6 +1,6 @@
 {
   "name": "@etalab/edigeo-parser",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Blazing fast parser for EDIGEO files",
   "main": "./lib",
   "repository": "git@github.com:etalab/edigeo-parser.git",
