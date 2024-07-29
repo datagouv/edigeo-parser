@@ -82,6 +82,13 @@ npm install -g @etalab/edigeo-parser
 edigeo-parse < edigeo-540080000C01.tar.bz2
 ```
 
+Pour débugger avec plus d'informations
+
+```
+DEBUG_COLORS=no DEBUG=edigeo-parser:* DEBUG_HIDE_DATE=yes \
+edigeo-parse < edigeo-395110000U01.tar.bz2
+```
+
 ## Licence
 
 MIT
